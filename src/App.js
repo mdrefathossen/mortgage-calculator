@@ -1,9 +1,12 @@
-
+import {Navbar} from './components/Navbar';
+import { Result } from './components/Result';
 
 function App() {
   return (
     <div className="App">
-        hello everyone
+        {/* <Navbar/> */}
+        <Navbar/>
+        <Result/>
     </div>
   );
 }
