@@ -1,4 +1,4 @@
-import { Grid } from '@mui/material';
+import { Container, Grid } from '@mui/material';
 import {Navbar} from './components/Navbar';
 import { Result } from './components/Result';
 import { SliderSelect } from './components/SliderSelect';
@@ -9,15 +9,17 @@ function App() {
     <div className="App">
         {/* <Navbar/> */}
         <Navbar/>
+        <Container maxWidth = "xl">
         <Grid container spacing={5}>
-          <Grid item>
+          <Grid item md={6}>
             <SliderSelect/>
             <Tenure/>
           </Grid>
-          <Grid item>
+          <Grid item md={6}>
             <Result/>
           </Grid>
         </Grid>
+        </Container>
     </div>
   );
 }
