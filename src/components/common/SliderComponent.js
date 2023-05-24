@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from '@mui/material/Slider';
 import { Stack, Typography, dividerClasses } from '@mui/material';
 
-export const SliderComponent = ({ defaultValue, min, max, amount, label, unit }) => {
+export const SliderComponent = ({ defaultValue, min, max, amount, label, unit,step,value,onChange }) => {
   return (
     <Stack my={1.4}>
       <Stack gap={1}>
@@ -15,7 +15,15 @@ export const SliderComponent = ({ defaultValue, min, max, amount, label, unit })
       defaultValue={defaultValue}
       aria-label="Default"
       valueLabelDisplay="auto"
+      marks
+      step={step}
+      value={value}
+      onChange={onChange}
     />
+    <Stack direction="row" justifyContent="space-between">
+        <Typography variant='caption' color="text.secondary">{unit} {min} </Typography>
+        <Typography variant='caption' color="text.secondary">{unit} {max} </Typography>
+    </Stack>
     </Stack>
   )
 }
